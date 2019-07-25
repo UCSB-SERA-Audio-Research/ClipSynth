@@ -3,3 +3,6 @@ A repository of prototypes for ``ClipSynth – A Tool for Generating Instruments
 
 ## Execution
 Simply open [index.html](https://ucsb-sera-audio-research.github.io/ClipSynth/) in your browser!
+
+## Connecting Sensors
+Coming soon!
