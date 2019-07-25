@@ -1,4 +1,4 @@
-# Prototypes
+# ClipSynth
 A repository of prototypes for ``ClipSynth – A Tool for Generating Instruments from Audio Recordings with Live Effect Manipulation using Sensors``.
 
 ## Execution
