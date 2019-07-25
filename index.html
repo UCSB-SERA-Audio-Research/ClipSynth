@@ -1,0 +1,121 @@
+<!---<script type="module">
+    import { MidiParser } from './lib/midi-parser.js';
+    window.MidiParser = MidiParser;
+    var source = document.getElementById('MIDI');
+    MidiParser.parse(source, function (obj) {
+        readMIDI(obj);
+    });
+</script>-->
+<script src="./lib/midi-parser.js"></script>
+<script src="./lib/encode.js"></script>
+<script src="./lib/ffmpeg.js"></script>
+<script src="./lib/notes.js"></script>
+<script src="./lib/read-midi.js"></script>
+<script src="./lib/bundle.js"></script>
+<script src="./lib/web-audio.js"></script>
+<script src="./lib/index.js"></script>
+<script src="./lib/fft/real.js"></script>
+<script src="./lib/fft/complex.js"></script>
+<style>
+    * {
+        font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+        color: white;
+        background-color: rgb(29, 29, 29);
+    }
+
+    .number {
+        width: 60px;
+    }
+</style>
+
+<body>
+    MIDI File:
+    <input id="MIDI" type="file" name="file" />
+    <br />
+    Audio File:
+    <input id="AUDIO" type="file" name="file" />
+    <br />
+    <input type="checkbox" class="length">MIDI-Controlled Length</input>
+    <br />
+    Minimum Note Length:
+    <span class="sensorControllable">
+        <input type="range" class="minimum" min="0" max="1" step="0.001" value="0.25" />
+    </span>
+    <br />
+    Maximum Note Length:
+    <span class="sensorControllable">
+        <input type="range" class="maximum" min="0" max="1" step="0.001" value="1" />
+    </span>
+    <br />
+    Gain:
+    <span class="sensorControllable">
+        <input type="range" class="gain" min="0" max="1" step="0.001" value="1" />
+    </span>
+    <br />
+    Effect:
+    <select id="effect">
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="none" selected>None</option>
+    </select>
+    <div class="delayControl" hidden>
+        Feedback:
+        <span class="sensorControllable">
+            <input type="range" class="feedback" min="0" max="1" step="0.001" />
+        </span>
+        <br />
+        Delay Time:
+        <span class="sensorControllable">
+            <input type="range" class="delayTime" min="1" max="1000" step="0.001" />
+        </span>
+        <br />
+        Wet Level:
+        <span class="sensorControllable">
+            <input type="range" class="wetLevel" min="0" max="1" step="0.001" />
+        </span>
+        <br />
+        Dry Level:
+        <span class="sensorControllable">
+            <input type="range" class="dryLevel" min="0" max="1" step="0.001" />
+        </span>
+        <br />
+    </div>
+    <div class="distortionControl" hidden>
+        <span class="sensorControllable">
+            Multiplier:
+            <input type="number" class="distortionValue number" min="0" step="1" max="5" value="1.5" />
+        </span>
+        </span>
+        <br />
+    </div>
+    <div class="reverbFile" hidden>
+        Impulse Response:
+        <input id="REVERB" type="file" name="file" />
+        <br />
+        <span class="sensorControllable">
+            Low Cut:
+            <input type="number" class="lowCut number" min="0" step="1" max="22030" value="0" />
+        </span>
+        <br />
+        <span class="sensorControllable">
+            High Cut:
+            <input type="number" class="highCut number" min="0" step="1" max="22030" value="22030" />
+        </span>
+    </div>
+    <br />
+    <input type="checkbox" class="sensor">Sensor Input</input>
+    <br />
+    <span class="sensorInfo" hidden>
+        Right-click on a slider or input field to select as the sensor target!
+        <br />
+    </span>
+    <br />
+    <button onclick="run();">
+        Run
+    </button>
+    <button onclick="stop();">
+        Stop
+    </button>
+    <input type="checkbox" class="live">Live</input>
+</body>

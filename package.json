@@ -1,0 +1,29 @@
+{
+  "name": "prototypes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pitchfinder": "^2.1.0",
+    "tuna": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "browserify lib/requirements.js -o lib/bundle.js;node index.js;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCSB-SERA-Audio-Research/Prototypes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UCSB-SERA-Audio-Research/Prototypes/issues"
+  },
+  "homepage": "https://github.com/UCSB-SERA-Audio-Research/Prototypes#readme"
+}
