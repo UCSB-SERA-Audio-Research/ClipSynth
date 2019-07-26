@@ -37,3 +37,6 @@ WebUSB requires an Arduino model that gives the sketch complete control over the
 ### Customization
 ``arduino/sensor-input/sensor-input.ino`` includes comments for help setting up your own sensor. 
 > All data sent to WebUSB must be a float value between 0 and 1. If the values are outside this range, ClipSynth may encounter unexpected issues.
+
+## Examples
+Examples are located in the ``examples`` directory. Test audio clips can also be found in the ``tests`` directory.
