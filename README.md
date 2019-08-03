@@ -1,6 +1,30 @@
 # ClipSynth
 Convert any audio clip into a synthetic instrument!
 
+## Examples
+### Mii Theme but it's Sans
+
+<audio controls>
+    <source src="https://ucsb-sera-audio-research.github.io/ClipSynth/examples/Mii%20Theme%20but%20it's%20Sans.wav" type="audio/wav">
+</audio>
+
+### Super Mario Bros - Square Wave
+
+<audio controls>
+    <source src="https://ucsb-sera-audio-research.github.io/ClipSynth/examples/Super%20Mario%20Bros%20-%20Square%20Wave.wav" type="audio/wav">
+</audio>
+
+### SERA Demonstration Track
+
+<audio controls>
+    <source src="https://ucsb-sera-audio-research.github.io/ClipSynth/examples/SERA%20Demonstration%20Track.wav" type="audio/wav">
+</audio>
+
+### Monody - TheFatRat - Electronic Piano
+<audio controls>
+    <source src="https://ucsb-sera-audio-research.github.io/ClipSynth/examples/Monody%20-%20TheFatRat%20-%20Electronic%20Piano.wav" type="audio/wav">
+</audio>
+
 ## Execution
 Simply open [index.html](https://ucsb-sera-audio-research.github.io/ClipSynth/) in your browser!
 
